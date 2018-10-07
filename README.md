@@ -1,4 +1,4 @@
-# T.c. Kimlik Numarası Doğrulama Projesi
+# Nuxt İle T.c. Kimlik Numarası Doğrulama Projesi
 
 ## Nasıl kurulur
 
@@ -14,7 +14,6 @@ nuxt.config.js dosyasında tanımlanan serverMiddleware ile backend tarafında e
 
 ### Kullanılan Modüller
 
-* nuxt
 * express
 * axios
 * vue
