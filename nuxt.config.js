@@ -3,9 +3,6 @@ const bodyParser = require('body-parser')
 
 module.exports = {
   mode: 'universal',
-  router: {
-    middieware : "soap"
-  },
   /*
   ** Headers of the page
   */
@@ -72,9 +69,7 @@ module.exports = {
     ** You can extend webpack config here
     */
     extend(config, ctx) {
-      config.node = {
-        fs: 'empty'
-      }
+      
     }
   },
   serverMiddleware:[
