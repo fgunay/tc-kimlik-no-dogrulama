@@ -3,6 +3,12 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
+function uppercase(v) {
+    const letters = { "i": "İ", "ş": "Ş", "ğ": "Ğ", "ü": "Ü", "ö": "Ö", "ç": "Ç", "ı": "I" };
+    v = v.replace(/(([iışğüçö]))/g, function(letter){ return letters[letter]; })
+    return v.toUpperCase();
+}
+
 const store = () => {
     return new Vuex.Store({
       state: () => ({
@@ -19,6 +25,10 @@ const store = () => {
       }),
       actions:{
         async sorgu(){
+            
+            this.state.data.Ad = uppercase(this.state.data.Ad);
+            this.state.data.Soyad = uppercase(this.state.data.Soyad);
+
             if(!(this.state.data.Ad == '') && !(this.state.data.Soyad == '') && !(this.state.data.TCKimlikNo == '') && !(this.state.data.DogumYili == '')){
                 this.$axios.$post('http://127.0.0.1:3000/api/kimlik-sorgu-api', 
                 this.state.data ).then( result => {
