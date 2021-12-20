@@ -15,7 +15,7 @@
             .col-md-12.mb-3
               input(type='text' placeholder="Doğum Tarihiniz" v-model="$store.state.data.DogumYili" required).form-control
             .col-md-12.mb-3
-              button.btn.btn-primary.btn-lg.btn-block(type='button' @click="tcKimlikDogrula") Kimlik Doğrula
+              button.btn.btn-primary.btn-lg.btn-block(type='button' @click="tcKimlikDogrula") Tc Kimlik Doğrula
 </template>
 
 <script>
